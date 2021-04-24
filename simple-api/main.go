@@ -63,6 +63,9 @@ func keyValuePutHandler(w http.ResponseWriter, r *http.Request) {
 func main() {
 	r := mux.NewRouter()
 
+	/*
+		curl -v -X PUT -d 'someValue' http://localhost:8080/v1/someKey
+	*/
 	r.HandleFunc("/v1/{key}", keyValuePutHandler).Methods("PUT")
 
 	log.Fatal(http.ListenAndServe(":8080", r))
