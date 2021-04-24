@@ -15,3 +15,5 @@
 # vendor/
 
 cloudnative
+simple-api/simplev1
+gorillamux-impl/gorilla
